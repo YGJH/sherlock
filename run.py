@@ -14,6 +14,8 @@ for user in sys.argv[1:]:
 
 
     for i in result:
-        print(i.strip())
+        if "Checking username" in i:
+            continue
+        print("[*]\t"+i.strip())
 
-    print("total "+len(result)+" results")
+    print("total "+str(len(result))+" results")
